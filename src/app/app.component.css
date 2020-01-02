@@ -1,0 +1,17 @@
+.add-project{
+  background-color: #68727C;
+  border: #68727C;
+  top: 15px;
+  position: relative;
+}
+
+mat-row.mat-row.ng-star-inserted {
+  border: 0;
+}
+mat-row.mat-row.ng-star-inserted:last-child {
+  /* row border */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);;
+}
+.edit-btn-margin{
+  margin-right:30px;
+}

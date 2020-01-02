@@ -1,0 +1,37 @@
+/* Global styles to this file, and any imports */
+@import '~@angular/material/theming';
+@import url('//fonts.googleapis.com/icon?family=Material+Icons');
+
+@include mat-core();
+
+$primary: mat-palette($mat-indigo, 500);
+$accent:  mat-palette($mat-pink, 500, A200, A400);
+$warn:    mat-palette($mat-red, 500);
+
+$config: mat-typography-config();
+
+$theme: mat-light-theme($primary, $accent, $warn);
+
+@include angular-material-theme($theme);
+
+body {
+  font-family: mat-font-family($config);
+  font-weight: normal;
+  margin: 0;
+}
+
+.spacer-common{
+  margin:0; 
+  padding:0;
+}
+.spacer-10 { 
+  @extend .spacer-common;
+  height:10px; 
+}
+
+.spacer { 
+  @extend .spacer-common;
+  height:50px; 
+}
+
+

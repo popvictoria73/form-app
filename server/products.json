@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "projectNumber": 123456781,
+      "projectTitle": "Yotel Edinburgh",
+      "projectLeadOffice": "Edinburgh",
+      "client": "Yotel",
+      "stage": "Approval In Principle",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "projectNumber": 123456782,
+      "projectTitle": "Park Plaza",
+      "projectLeadOffice": "London",
+      "client": "Park Plaza",
+      "stage": "Detailed Design"
+    },
+    {
+      "id": 3,
+      "projectNumber": 123456783,
+      "projectTitle": "Hyatt Place",
+      "projectLeadOffice": "London",
+      "client": "Hyatt Place",
+      "stage": "Operation / Maintenance"
+    },
+    {
+      "id": 4,
+      "projectNumber": 123456784,
+      "projectTitle": "Leonardo Royal",
+      "projectLeadOffice": "London",
+      "client": "Leonardo Royal",
+      "stage": "Feasibility / Masterplan"
+    },
+    {
+      "projectNumber": 123456785,
+      "projectTitle": "Marlin Apartments",
+      "projectLeadOffice": "UK",
+      "client": "Marlin Apartments",
+      "stage": "Outline Design",
+      "id": 5
+    },
+    {
+      "projectNumber": 123456786,
+      "projectTitle": "Demo Homes",
+      "projectLeadOffice": "USA",
+      "client": "Demo",
+      "stage": "Detailed Design",
+      "id": 6
+    },
+    {
+      "projectNumber": 123456787,
+      "projectTitle": "Demo Villas",
+      "projectLeadOffice": "USA",
+      "client": "Demo",
+      "stage": "Feasibility / Masterplan",
+      "id": 7
+    },
+    {
+      "projectNumber": 123456788,
+      "projectTitle": "Demo Apartments",
+      "projectLeadOffice": "USA",
+      "client": "Demo",
+      "stage": "Operation / Maintenance",
+      "id": 8
+    },
+    {
+      "projectNumber": 123456789,
+      "projectTitle": "Demo Highways",
+      "projectLeadOffice": "USA",
+      "client": "Demo",
+      "stage": "Detailed Design",
+      "id": 9
+    }
+  ]
+}

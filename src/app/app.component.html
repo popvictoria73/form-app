@@ -1,0 +1,49 @@
+<div class="spacer"></div>
+<div class="container mat-elevation-z8">
+  <div class="float-right">
+    <button id="addProjectBtn"  value="Add Project" class="btn btn-primary btn-padding add-project" (click)="addProjectDialog()">Add Project</button>
+  </div>
+  <div class="spacer"></div>
+  <mat-table #table [dataSource]="projects" class="mat-cell">
+    <ng-container matColumnDef="projectNumber">
+      <mat-header-cell *matHeaderCellDef>Project Number</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.projectNumber}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="projectTitle">
+      <mat-header-cell *matHeaderCellDef>Project Title</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.projectTitle}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="projectLeadOffice">
+      <mat-header-cell *matHeaderCellDef>Project Lead Office</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.projectLeadOffice}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="client">
+      <mat-header-cell *matHeaderCellDef>Client</mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.client}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="stage">
+      <mat-header-cell *matHeaderCellDef>Stage</mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.stage}}</mat-cell>
+    </ng-container>
+
+    <!-- actions -->
+    <ng-container matColumnDef="actions">
+      <mat-header-cell *matHeaderCellDef>
+      </mat-header-cell>
+      <mat-cell *matCellDef="let row; let i=index;">
+        <button class="btn btn-primary btn-padding edit-btn-margin" (click)="EditProjectDetails(row)">Edit</button>
+        <button class="btn btn-primary btn-padding">Risks</button>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+  <div class="spacer-10"></div>
+  <mat-paginator #paginator [pageSizeOptions]="[5, 10, 15, 20]" showFirstLastButtons>
+  </mat-paginator>
+</div>

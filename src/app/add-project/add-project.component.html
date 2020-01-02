@@ -1,0 +1,63 @@
+<div class="container">
+    <h3 mat-dialog-title class="text-center">Add project</h3>
+
+    <form name="form" [formGroup]="form" (ngSubmit)="submit" >
+
+        <div class="form-group">
+            <label for="projectNumber">Project Number</label>
+            <input type="number"  class="form-control" formControlName="projectNumber" [ngClass]="{'is-invalid':form.get('projectNumber').touched && form.get('projectNumber').invalid}" required />
+            <div class="invalid-feedback">
+              <div>Project Number is required</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+              <label for="projectTitle">Project Title</label>
+              <input type="text"  class="form-control" formControlName="projectTitle" [ngClass]="{'is-invalid':form.get('projectTitle').touched && form.get('projectTitle').invalid}" required />
+              <div class="invalid-feedback">
+                <div>Project Title is required</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+                <label for="projectLeadOffice">Project LeadOffice</label>
+                <input type="text"  class="form-control" formControlName="projectLeadOffice" [ngClass]="{'is-invalid':form.get('projectLeadOffice').touched && form.get('projectLeadOffice').invalid}" required />
+                <div class="invalid-feedback">
+                  <div>Project Lead Office is required</div>
+                </div>
+              </div>
+
+
+        <div class="form-group">
+          <label for="client">Client</label>
+          <input type="text"  class="form-control" formControlName="client" [ngClass]="{'is-invalid':form.get('client').touched && form.get('client').invalid}" required />
+          <div class="invalid-feedback">
+            <div>Client is required</div>
+          </div>
+        </div>
+        <div class="form-group">
+            <label for="stage">Stage</label>
+              <select id="addSelect" class="form-control" formControlName="stage" [ngClass]="{'is-invalid':form.get('stage').touched && form.get('stage').invalid}" required >
+                  <option value="">Please select</option>
+                <option *ngFor="let stage of stages" [value]="stage">{{stage}}</option>
+              </select>
+              <div class="invalid-feedback">
+                  <div>Stage is required</div>
+                </div>
+            
+          </div>
+        <!-- <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input type="text" class="form-control" formControlName="lastName" [ngClass]="{'is-invalid':form.get('lastName').touched && form.get('lastName').invalid}" required />
+          <div class="invalid-feedback">
+            <div>Last Name is required</div>
+          </div>
+        </div> -->
+        <div class="form-group text-center">
+          <button class="btn btn-primary"  [disabled]="!form.valid"  [mat-dialog-close]="1" (click)="projectAdd()">Submit</button>
+          <button class="btn btn-primary cancel-btn" (click)="cancelClick()">Cancel</button>
+        </div>
+      </form>
+
+  </div>
+  
